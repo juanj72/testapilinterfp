@@ -1,0 +1,21 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches: ['**']
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code Repository
+      uses: actions/checkout@v3
+
+    - name: Checkout Code Repository
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+
+    - name: Checkout Code Repository
+      uses: pre-commit/action@v3.0.1
